@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './App.css';
 
 const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
@@ -31,30 +32,42 @@ function App() {
   };
 
   return (
-    <>
+    <Container>
       <header>
         <h1>Geolocation</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="input-group mb-3">
-            <input type="text" className="form-control" placeholder="Enter a city name" onChange={handleInput} />
-            <button type="submit" className="btn btn-primary" disabled={loading}>
-              {loading ? 'Loading...' : 'Search'}
-            </button>
-          </div>
-        </form>
+        <Form onSubmit={handleSubmit}>
+          <Row className="mb-3">
+            <Col>
+              <Form.Control type="text" placeholder="Enter a city name" onChange={handleInput} />
+            </Col>
+            <Col>
+              <Button type="submit" variant="primary" disabled={loading}>
+                {loading ? 'Loading...' : 'Search'}
+              </Button>
+            </Col>
+          </Row>
+        </Form>
       </header>
       {error && <div className="alert alert-danger">{error}</div>}
       {responseData && (
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title">Location Details</h5>
-            <p><strong>Display Name:</strong> {responseData.display_name}</p>
-            <p><strong>Latitude:</strong> {responseData.lat}</p>
-            <p><strong>Longitude:</strong> {responseData.lon}</p>
-          </div>
-        </div>
+        <Card>
+          <Card.Body>
+            <Card.Title>Location Details</Card.Title>
+            <Row>
+              <Col>
+                <p><strong>Display Name:</strong> {responseData.display_name}</p>
+              </Col>
+              <Col>
+                <p><strong>Latitude:</strong> {responseData.lat}</p>
+              </Col>
+              <Col>
+                <p><strong>Longitude:</strong> {responseData.lon}</p>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
       )}
-    </>
+    </Container>
   );
 }
 
