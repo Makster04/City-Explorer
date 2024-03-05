@@ -64,6 +64,11 @@ function App() {
                 <p><strong>Longitude:</strong> {responseData.lon}</p>
               </Col>
             </Row>
+            <Row>
+            <Col>
+            <img src={`https://maps.locationiq.com/v3/staticmap?key=${API_KEY}&center=${responseData.lat},${responseData.lon}&zoom=9`} style={{ width: '100%' }} />
+            </Col>
+            </Row>
           </Card.Body>
         </Card>
       )}
@@ -72,3 +77,4 @@ function App() {
 }
 
 export default App;
+

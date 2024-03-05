@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 100vw; /* Take full viewport width */
+  margin: 0;
   padding: 2rem;
   text-align: center;
+  background-color: #1a1a1a; /* Dark background color */
+  color: #fff; /* White text color */
 }
 
 .logo {
@@ -11,11 +13,13 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #00ff00); /* Green drop shadow on hover */
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #ff6600); /* Orange drop shadow on hover for React logo */
 }
 
 @keyframes logo-spin {
@@ -34,26 +38,34 @@
 }
 
 .card {
-  width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px; /* Increase width for a larger card */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
   margin: 0 auto;
+  background-color: #333; /* Dark card background */
+  transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale up on hover */
 }
 
 .card-body {
-  padding: 20px;
+  padding: 2rem;
 }
 
 .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
+  font-size: 2rem; /* Larger font size for title */
+  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+  color: #00ccff; /* Cyan title color */
 }
 
 .card p {
-  margin-bottom: 5px;
+  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+  font-size: 1.2rem; /* Larger font size for paragraph */
 }
 
 .text-danger {
-  color: red;
+  color: #ff5050; /* Red text color */
 }
