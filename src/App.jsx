@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './App.css';
@@ -7,7 +7,7 @@ const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
 function App() {
   const [responseData, setResponseData] = useState(null);
-  // const [weatherResponseData, setWeatherResponseData] = useState({});
+  const [weatherResponseData, setWeatherResponseData] = useState({});
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
@@ -23,9 +23,10 @@ function App() {
     try {
       setLoading(true);
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
-      //let weatherResponse = await.axios.get('`http://localhost:3000/weather/${cityResponse.data[0].lat)_$ {cityResponse.data[0].lon}` + search);
-      setResponseData(response.data[0]);
-      // setWeatherResponseData(weatherResponse);
+      const cityResponse = response.data;
+      const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`);
+      setResponseData(cityResponse[0]);
+      setWeatherResponseData(weatherResponse.data);
       setError(null);
     } catch (error) {
       console.error('Error fetching location:', error);
@@ -33,7 +34,7 @@ function App() {
     } finally {
       setLoading(false);
     }
-  };
+  };  
 
   return (
     <Container>
@@ -70,10 +71,20 @@ function App() {
               </Col>
             </Row>
             <Row>
-            <Col>
-            <img src={`https://maps.locationiq.com/v3/staticmap?key=${API_KEY}&center=${responseData.lat},${responseData.lon}&zoom=9`} style={{ width: '100%' }} />
-            </Col>
+              <Col>
+                <img src={`https://maps.locationiq.com/v3/staticmap?key=${API_KEY}&center=${responseData.lat},${responseData.lon}&zoom=9`} style={{ width: '100%' }} />
+              </Col>
             </Row>
+          </Card.Body>
+        </Card>
+      )}
+      {weatherResponseData && (
+        <Card className="card-weather">
+          <Card.Body>
+            <Card.Title className="card-weather-title">Weather Details</Card.Title>
+            <div className="card-weather-content">
+              {/* Display weather data here */}
+            </div>
           </Card.Body>
         </Card>
       )}
