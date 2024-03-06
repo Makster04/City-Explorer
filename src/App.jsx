@@ -7,7 +7,6 @@ const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
 function App() {
   const [responseData, setResponseData] = useState(null);
-  const [weatherResponseData, setWeatherResponseData] = useState(null); 
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
@@ -23,7 +22,6 @@ function App() {
     try {
       setLoading(true);
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
-      let cityResponse = await axios.get('https://localhost:3000/weather')
       setResponseData(response.data[0]);
       setResponseData(cityResponse);
       setError(null);
@@ -82,4 +80,3 @@ function App() {
 }
 
 export default App;
-
