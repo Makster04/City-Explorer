@@ -6,6 +6,7 @@
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->  
 ![lab-06 functions overview](https://github.com/Makster04/City-Explorer/assets/86382359/e3302eae-b6a7-49de-afbf-3246e089652f)
+![Lab-06 data-flow(1)](https://github.com/Makster04/City-Explorer/assets/86382359/ac024990-cb7e-4a7d-b55d-80f9c8f20881)
 
 
 ## Getting Started
