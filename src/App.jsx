@@ -34,7 +34,8 @@ function App() {
   return (
     <Container>
       <header>
-        <h1>Geolocation</h1>
+        <h1>Geolocation Watchlist</h1>
+        <h2>Location:</h2>
         <Form onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Col>

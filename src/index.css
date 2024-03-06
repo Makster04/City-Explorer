@@ -1,11 +1,11 @@
 :root {
-  font-family: 'Comic Sans MS', cursive; /* Because why not? */
+  font-family: 'Garamond', serif; /* Because why not? */
   line-height: 2; /* Let's make it spacious and playful */
   font-weight: 200; /* Light and airy, like a butterfly */
 
   color-scheme: light dark;
-  color: #FFB600; /* Bright and intense, like nuclear power */
-  background-color: #4C9900; /* Deep green, representing energy */
+  color: #0072CE; /* CIA blue */
+  background: linear-gradient(45deg, #000000 50%, #2C3033 50%); /* Rusty black gradient, representing secrecy */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility; /* Because we want it to be extra legible */
@@ -17,12 +17,12 @@
 
 a {
   font-weight: 1000; /* Maximum boldness, because why not? */
-  color: #FF4500; /* Fiery orange, representing danger */
+  color: #181818; /* Black, representing table */
   text-decoration: underline overline; /* Let's go wild with decorations */
   transition: color 5s ease-out; /* Slow, like a leisurely stroll through Gotham */
 }
 a:hover {
-  color: #FF6347; /* Intense red, signaling warning */
+  color: #FF0000; /* Red, signaling danger */
 }
 
 body {
@@ -37,42 +37,50 @@ body {
 h1 {
   font-size: 6em; /* Massive, like a skyscraper */
   line-height: 1; /* Let's make it tight and compact */
-  color: #FFD700; /* Shining gold, representing value */
-  text-shadow: 5px 5px 10px rgba(255, 255, 0, 0.8); /* Blindingly bright */
+  color: #9e1010; /* Dark red, representing intense alert */
+  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.8); /* Blindingly bright */
+  animation: pulse 1s infinite alternate; /* Pulse animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 button {
   border-radius: 50%; /* Because circles are cool */
-  border: 5px dashed #FF0000; /* Intense red, representing danger */
+  border: 5px dashed #FF0000; /* Red, signaling danger */
   padding: 1em 2em; /* Because bigger is better */
   font-size: 1em; /* Huge and humongous */
-  background-color: #FFA500; /* Orange, representing warning */
-  color: #FFD700; /* Shining gold, representing value */
+  background-color: #000000; /* Rusty black, representing secrecy */
+  color: #ff0000; /* Red, signaling danger */
   cursor: help; /* Just to mess with expectations */
   transition: all 1s cubic-bezier(0.5, 0, 0.5, 1); /* Slow and dramatic */
-  box-shadow: 0 0 50px rgba(255, 69, 0, 0.5); /* Intense red, representing danger */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Dark shadow */
 }
 button:hover {
   transform: scale(1.5) rotate(180deg); /* Because why not spin things around? */
-  background-color: #FF4500; /* Fiery orange, representing danger */
+  background-color: rgba(255, 255, 255, 0.8); /* Yellow, representing intelligence */
 }
 button:focus,
 button:focus-visible {
   outline: 5px dashed #FF0000; /* Bold and brash */
-  box-shadow: 0 0 0 25px rgba(255, 69, 0, 0.7); /* Intense red, representing danger */
+  box-shadow: 0 0 0 25px rgba(255, 0, 0, 0.7); /* Red, signaling danger */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #FFD700; /* Shining gold, representing value */
-    background-color: #FF4500; /* Fiery orange, representing danger */
+    color: #161616; /* Dark gray, representing shadow */
+    background-color: #FFFFFF; /* White, representing purity */
   }
   a:hover {
-    color: #FF0000; /* Intense red, signaling warning */
+    color: #FF0000; /* Red, signaling danger */
   }
   button {
-    background-color: #FF0000; /* Intense red, representing danger */
+    background-color: #FF0000; /* Red, signaling danger */
   }
 }
-
-
