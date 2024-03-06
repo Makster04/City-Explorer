@@ -1,76 +1,78 @@
 :root {
-  font-family: 'Courier New', monospace; /* Because it's Indiana Jones' typewriter */
-  line-height: 1.8; /* Let the text breathe like a wanderer */
-  font-weight: 700; /* Bold adventures require bold fonts */
+  font-family: 'Comic Sans MS', cursive; /* Because why not? */
+  line-height: 2; /* Let's make it spacious and playful */
+  font-weight: 200; /* Light and airy, like a butterfly */
 
   color-scheme: light dark;
-  color: rgba(255, 165, 0, 0.9); /* Rusty orange, like ancient treasures */
-  background-color: #3d3522; /* Deep earthy brown, reminiscent of forgotten tombs */
+  color: #FFB600; /* Bright and intense, like nuclear power */
+  background-color: #4C9900; /* Deep green, representing energy */
 
-  font-synthesis: weight style;
-  text-rendering: optimizeSpeed; /* Quick like a whip crack */
-  -webkit-font-smoothing: antialiased; /* For clear, sharp edges */
-  -moz-osx-font-smoothing: grayscale; /* To age like fine parchment */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility; /* Because we want it to be extra legible */
+  -webkit-font-smoothing: subpixel-antialiased; /* Super smooth, like a polished mirror */
+  -moz-osx-font-smoothing: grayscale; /* Adding a touch of old school */
 
-  transform: rotate(-1deg) scale(1.05); /* Slight tilt, ready for adventure */
+  transform: rotate(5deg) scale(1.1); /* Wild and unpredictable */
 }
 
 a {
-  font-weight: 900; /* Brave adventurers need bold links */
-  color: #00ff00; /* Vibrant green, like lush jungle foliage */
-  text-decoration: none; /* Clean and unobstructed paths */
-  transition: color 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth transition, like a seamless journey */
+  font-weight: 1000; /* Maximum boldness, because why not? */
+  color: #FF4500; /* Fiery orange, representing danger */
+  text-decoration: underline overline; /* Let's go wild with decorations */
+  transition: color 5s ease-out; /* Slow, like a leisurely stroll through Gotham */
 }
 a:hover {
-  color: #ff00ff; /* Majestic purple, the color of royalty */
+  color: #FF6347; /* Intense red, signaling warning */
 }
 
 body {
-  margin: 0;
+  margin: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 480px; /* Wide as the vistas of distant lands */
-  min-height: 120vh; /* Tall as the mountains of the Andes */
+  min-width: 50%; /* Filling up every inch of screen space */
+  min-height: 50vh; /* Reaching for the stars */
 }
 
 h1 {
-  font-size: 5em; /* Epic size, fit for a hero */
-  line-height: 0.8; /* Precise and clear, like a map's legend */
-  color: #ffd700; /* Glowing gold, like the treasures of El Dorado */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadows, like whispers of the past */
+  font-size: 6em; /* Massive, like a skyscraper */
+  line-height: 1; /* Let's make it tight and compact */
+  color: #FFD700; /* Shining gold, representing value */
+  text-shadow: 5px 5px 10px rgba(255, 255, 0, 0.8); /* Blindingly bright */
 }
 
 button {
-  border-radius: 30%; /* Rounded edges for a softer touch */
-  border: 2px solid #00ffff; /* Blue border, a hint of the vast oceans */
-  padding: 0.7em 1.3em; /* Compact yet comfortable */
-  font-size: 1.1em; /* Bold and legible */
-  background-color: #8b4513; /* Deep brown, like well-worn leather */
-  color: #0000ff; /* Royal blue, a regal touch */
-  cursor: pointer; /* Ready for action */
-  transition: all 0.5s ease-in-out; /* Smooth transitions, like graceful acrobatics */
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Golden glow, like the sun's embrace */
+  border-radius: 50%; /* Because circles are cool */
+  border: 5px dashed #FF0000; /* Intense red, representing danger */
+  padding: 1em 2em; /* Because bigger is better */
+  font-size: 1em; /* Huge and humongous */
+  background-color: #FFA500; /* Orange, representing warning */
+  color: #FFD700; /* Shining gold, representing value */
+  cursor: help; /* Just to mess with expectations */
+  transition: all 1s cubic-bezier(0.5, 0, 0.5, 1); /* Slow and dramatic */
+  box-shadow: 0 0 50px rgba(255, 69, 0, 0.5); /* Intense red, representing danger */
 }
 button:hover {
-  transform: scale(1.1) rotate(5deg); /* A playful tilt, like a smirk */
-  background-color: #cd853f; /* Saddle brown, warm and inviting */
+  transform: scale(1.5) rotate(180deg); /* Because why not spin things around? */
+  background-color: #FF4500; /* Fiery orange, representing danger */
 }
 button:focus,
 button:focus-visible {
-  outline: 5px dashed #ffd700; /* Golden dash, leading the way */
-  box-shadow: 0 0 0 5px rgba(255, 165, 0, 0.7); /* Rusty orange glow, daring and bold */
+  outline: 5px dashed #FF0000; /* Bold and brash */
+  box-shadow: 0 0 0 25px rgba(255, 69, 0, 0.7); /* Intense red, representing danger */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #8b4513; /* Saddle brown, like well-worn leather */
-    background-color: #fff8dc; /* Light beige, like sun-bleached sand */
+    color: #FFD700; /* Shining gold, representing value */
+    background-color: #FF4500; /* Fiery orange, representing danger */
   }
   a:hover {
-    color: #ff4500; /* Orange-red, like a setting sun */
+    color: #FF0000; /* Intense red, signaling warning */
   }
   button {
-    background-color: #d2b48c; /* Tan, warm and comforting */
+    background-color: #FF0000; /* Intense red, representing danger */
   }
 }
+
+
