@@ -76,17 +76,7 @@ function App() {
               </Col>
             </Row>
           </Card.Body>
-        </Card>
-      )}
-      {weatherResponseData && (
-        <Card className="card-weather">
-          <Card.Body>
-            <Card.Title className="card-weather-title">Weather Details</Card.Title>
-            <div className="card-weather-content">
-              {/* Display weather data here */}
-            </div>
-          </Card.Body>
-        </Card>
+          </Card>
       )}
     </Container>
   );
