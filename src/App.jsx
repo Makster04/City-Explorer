@@ -7,9 +7,11 @@ const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
 function App() {
   const [responseData, setResponseData] = useState(null);
+  const [weatherResponseData, setWeatherResponseData] = useState(null); 
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
+  
 
   const handleInput = (event) => {
     const value = event.target.value;
@@ -21,7 +23,9 @@ function App() {
     try {
       setLoading(true);
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
+      let cityResponse = await axios.get('https://localhost:3000/weather')
       setResponseData(response.data[0]);
+      setResponseData(cityResponse);
       setError(null);
     } catch (error) {
       console.error('Error fetching location:', error);
@@ -34,8 +38,8 @@ function App() {
   return (
     <Container>
       <header>
-        <h1>Geolocation Watchlist</h1>
-        <h2>Location:</h2>
+        <h1>Location Watchlist</h1>
+        <h2>Geolocation:</h2>
         <Form onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Col>
