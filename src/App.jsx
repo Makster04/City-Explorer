@@ -7,6 +7,7 @@ const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
 function App() {
   const [responseData, setResponseData] = useState(null);
+  // const [weatherResponseData, setWeatherResponseData] = useState({});
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
@@ -22,8 +23,9 @@ function App() {
     try {
       setLoading(true);
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
+      //let weatherResponse = await.axios.get('`http://localhost:3000/weather/${cityResponse.data[0].lat)_$ {cityResponse.data[0].lon}` + search);
       setResponseData(response.data[0]);
-      setResponseData(cityResponse);
+      // setWeatherResponseData(weatherResponse);
       setError(null);
     } catch (error) {
       console.error('Error fetching location:', error);
