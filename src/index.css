@@ -1,67 +1,79 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: 'Comic Sans MS', cursive; /* Because why not? */
+  line-height: 2.5; /* Let the text breathe */
+  font-weight: 700; /* Bold is the new normal */
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(255, 0, 0, 0.8); /* Fiery red, like the heart of a dragon */
+  background-color: #663399; /* A mysterious shade of purple */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: weight style;
+  text-rendering: optimizeSpeed; /* Let's speed up the text rendering */
+  -webkit-font-smoothing: subpixel-antialiased; /* Embrace the pixels */
+  -moz-osx-font-smoothing: auto; /* Let the fox decide */
+
+  /* Random transformation for added eccentricity */
+  transform: rotate(2deg) scale(1.1);
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 900; /* Super bold for the adventurous links */
+  color: #00ff00; /* Neon green - because life's too short for dull links */
+  text-decoration: underline wavy; /* Let's make those links dance */
+  transition: color 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); /* Slow transition for added drama */
 }
 a:hover {
-  color: #535bf2;
+  color: #ff00ff; /* Hot pink - because why not turn heads? */
 }
 
 body {
   margin: 0;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 480px; /* Because 320px is so last year */
+  min-height: 120vh; /* Let's make it taller just because */
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 6em; /* Go big or go home */
+  line-height: 0.5; /* Tighten up the lines */
+  color: #ffff00; /* Blinding yellow - to wake up the senses */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Shadow for that mysterious aura */
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  border-radius: 50%; /* Because circles are fun */
+  border: 2px solid #00ffff; /* Cyan border for a futuristic touch */
+  padding: 1em 2em; /* Just the right amount of padding */
+  font-size: 1.5em; /* Make it big and bold */
+  font-weight: 700; /* Keep it strong */
+  font-family: 'Courier New', monospace; /* Let's bring back the typewriter */
+  background-color: #ff3300; /* Vibrant orange for the rebels */
+  color: #0000ff; /* Royal blue - because everyone deserves a crown */
+  cursor: crosshair; /* Let's play a game */
+  transition: all 0.5s ease-in-out; /* Smooth transitions for added satisfaction */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* A fiery glow */
 }
 button:hover {
-  border-color: #646cff;
+  transform: scale(1.1) rotate(10deg); /* Let's make it spin and grow */
+  background-color: #66ff66; /* Refreshing green for the climax */
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 5px dashed #ff00ff; /* Magenta dash for focus - because why not? */
+  box-shadow: 0 0 0 5px rgba(0, 255, 255, 0.5); /* Cyan glow for focus - to grab attention */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #663399; /* A subtle nod to the dark mode */
+    background-color: #ffffcc; /* A cheerful shade of yellow */
   }
   a:hover {
-    color: #747bff;
+    color: #ff0000; /* Bright red - because light mode deserves some warmth */
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #cccccc; /* Soft gray for the light theme */
   }
 }
