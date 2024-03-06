@@ -55,13 +55,13 @@ function App() {
             <Card.Title>Location Details</Card.Title>
             <Row>
               <Col>
-                <p><strong>Display Name:</strong> {responseData.display_name}</p>
+                <p><strong>DISPLAY NAME:</strong> {responseData.display_name}</p>
               </Col>
               <Col>
-                <p><strong>Latitude:</strong> {responseData.lat}</p>
+                <p><strong>LATITUDE:</strong> {responseData.lat}</p>
               </Col>
               <Col>
-                <p><strong>Longitude:</strong> {responseData.lon}</p>
+                <p><strong>LONGITUDE:</strong> {responseData.lon}</p>
               </Col>
             </Row>
             <Row>

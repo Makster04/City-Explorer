@@ -1,29 +1,28 @@
 :root {
-  font-family: 'Comic Sans MS', cursive; /* Because why not? */
-  line-height: 2.5; /* Let the text breathe */
-  font-weight: 700; /* Bold is the new normal */
+  font-family: 'Courier New', monospace; /* Because it's Indiana Jones' typewriter */
+  line-height: 1.8; /* Let the text breathe like a wanderer */
+  font-weight: 700; /* Bold adventures require bold fonts */
 
   color-scheme: light dark;
-  color: rgba(255, 0, 0, 0.8); /* Fiery red, like the heart of a dragon */
-  background-color: #663399; /* A mysterious shade of purple */
+  color: rgba(255, 165, 0, 0.9); /* Rusty orange, like ancient treasures */
+  background-color: #3d3522; /* Deep earthy brown, reminiscent of forgotten tombs */
 
   font-synthesis: weight style;
-  text-rendering: optimizeSpeed; /* Let's speed up the text rendering */
-  -webkit-font-smoothing: subpixel-antialiased; /* Embrace the pixels */
-  -moz-osx-font-smoothing: auto; /* Let the fox decide */
+  text-rendering: optimizeSpeed; /* Quick like a whip crack */
+  -webkit-font-smoothing: antialiased; /* For clear, sharp edges */
+  -moz-osx-font-smoothing: grayscale; /* To age like fine parchment */
 
-  /* Random transformation for added eccentricity */
-  transform: rotate(2deg) scale(1.1);
+  transform: rotate(-1deg) scale(1.05); /* Slight tilt, ready for adventure */
 }
 
 a {
-  font-weight: 900; /* Super bold for the adventurous links */
-  color: #00ff00; /* Neon green - because life's too short for dull links */
-  text-decoration: underline wavy; /* Let's make those links dance */
-  transition: color 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); /* Slow transition for added drama */
+  font-weight: 900; /* Brave adventurers need bold links */
+  color: #00ff00; /* Vibrant green, like lush jungle foliage */
+  text-decoration: none; /* Clean and unobstructed paths */
+  transition: color 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth transition, like a seamless journey */
 }
 a:hover {
-  color: #ff00ff; /* Hot pink - because why not turn heads? */
+  color: #ff00ff; /* Majestic purple, the color of royalty */
 }
 
 body {
@@ -31,49 +30,47 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 480px; /* Because 320px is so last year */
-  min-height: 120vh; /* Let's make it taller just because */
+  min-width: 480px; /* Wide as the vistas of distant lands */
+  min-height: 120vh; /* Tall as the mountains of the Andes */
 }
 
 h1 {
-  font-size: 6em; /* Go big or go home */
-  line-height: 0.5; /* Tighten up the lines */
-  color: #ffff00; /* Blinding yellow - to wake up the senses */
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Shadow for that mysterious aura */
+  font-size: 5em; /* Epic size, fit for a hero */
+  line-height: 0.8; /* Precise and clear, like a map's legend */
+  color: #ffd700; /* Glowing gold, like the treasures of El Dorado */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadows, like whispers of the past */
 }
 
 button {
-  border-radius: 50%; /* Because circles are fun */
-  border: 2px solid #00ffff; /* Cyan border for a futuristic touch */
-  padding: 1em 2em; /* Just the right amount of padding */
-  font-size: 1.5em; /* Make it big and bold */
-  font-weight: 700; /* Keep it strong */
-  font-family: 'Courier New', monospace; /* Let's bring back the typewriter */
-  background-color: #ff3300; /* Vibrant orange for the rebels */
-  color: #0000ff; /* Royal blue - because everyone deserves a crown */
-  cursor: crosshair; /* Let's play a game */
-  transition: all 0.5s ease-in-out; /* Smooth transitions for added satisfaction */
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* A fiery glow */
+  border-radius: 30%; /* Rounded edges for a softer touch */
+  border: 2px solid #00ffff; /* Blue border, a hint of the vast oceans */
+  padding: 0.7em 1.3em; /* Compact yet comfortable */
+  font-size: 1.1em; /* Bold and legible */
+  background-color: #8b4513; /* Deep brown, like well-worn leather */
+  color: #0000ff; /* Royal blue, a regal touch */
+  cursor: pointer; /* Ready for action */
+  transition: all 0.5s ease-in-out; /* Smooth transitions, like graceful acrobatics */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Golden glow, like the sun's embrace */
 }
 button:hover {
-  transform: scale(1.1) rotate(10deg); /* Let's make it spin and grow */
-  background-color: #66ff66; /* Refreshing green for the climax */
+  transform: scale(1.1) rotate(5deg); /* A playful tilt, like a smirk */
+  background-color: #cd853f; /* Saddle brown, warm and inviting */
 }
 button:focus,
 button:focus-visible {
-  outline: 5px dashed #ff00ff; /* Magenta dash for focus - because why not? */
-  box-shadow: 0 0 0 5px rgba(0, 255, 255, 0.5); /* Cyan glow for focus - to grab attention */
+  outline: 5px dashed #ffd700; /* Golden dash, leading the way */
+  box-shadow: 0 0 0 5px rgba(255, 165, 0, 0.7); /* Rusty orange glow, daring and bold */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #663399; /* A subtle nod to the dark mode */
-    background-color: #ffffcc; /* A cheerful shade of yellow */
+    color: #8b4513; /* Saddle brown, like well-worn leather */
+    background-color: #fff8dc; /* Light beige, like sun-bleached sand */
   }
   a:hover {
-    color: #ff0000; /* Bright red - because light mode deserves some warmth */
+    color: #ff4500; /* Orange-red, like a setting sun */
   }
   button {
-    background-color: #cccccc; /* Soft gray for the light theme */
+    background-color: #d2b48c; /* Tan, warm and comforting */
   }
 }
