@@ -7,11 +7,12 @@ const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
 function App() {
   const [responseData, setResponseData] = useState(null);
-  const [weatherResponseData, setWeatherResponseData] = useState(null); // Updated state
+  const [weatherResponseData, setWeatherResponseData] = useState(null);
+  const [movieResponseData, setMovieResponseData] = useState(null); // New state for movie data
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
-  const [showRadar, setShowRadar] = useState(true); // Show radar GIF initially
+  const [showRadar, setShowRadar] = useState(true);
 
   const handleInput = (event) => {
     const value = event.target.value;
@@ -26,21 +27,18 @@ function App() {
     }
     try {
       setLoading(true);
-      setShowRadar(false); // Hide radar GIF on search
+      setShowRadar(false);
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
       const cityResponse = response.data;
-      // Include CORS handling for weather API request
-      const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`, {
-        headers: {
-          'Access-Control-Allow-Origin': 'https://clever-kitten-0f4b29.netlify.app'
-        }
-      });
+      const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`);
+      const movieResponse = await axios.get(`http://localhost:3000/movies/${city}`); // Fetch movie data
       setResponseData(cityResponse[0]);
-      setWeatherResponseData(weatherResponse.data); // Updated state
+      setWeatherResponseData(weatherResponse.data);
+      setMovieResponseData(movieResponse.data); // Update movie data state
       setError(null);
     } catch (error) {
-      console.error('Error fetching location:', error);
-      setError('Error fetching location. Please try again.');
+      console.error('Error fetching data:', error);
+      setError('Error fetching data. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -63,7 +61,7 @@ function App() {
             </Col>
           </Row>
         </Form>
-        {showRadar && <img src="radar2.gif" alt="Radar" />} {/* Show radar GIF */}
+        {showRadar && <img src="radar2.gif" alt="Radar" />}
       </header>
       {error && <div className="alert alert-danger">{error}</div>}
       {responseData && (
@@ -90,7 +88,7 @@ function App() {
         </Card>
       )}
       {weatherResponseData && (
-        <Card id="weather-card"> {/* Add unique ID */}
+        <Card id="weather-card">
           <Card.Body id="weather-body">
             <Card.Title id="weather-title">Weather Forecast</Card.Title>
             <Row id="weather-row">
@@ -100,6 +98,22 @@ function App() {
                   <p>DESCRIPTION: {forecast.description}</p>
                   <p>HIGH: {forecast.high}</p>
                   <p>LOW: {forecast.low}</p>
+                </Col>
+              ))}
+            </Row>
+          </Card.Body>
+        </Card>
+      )}
+      {movieResponseData && ( // Display movie data if available
+        <Card id="movie-card">
+          <Card.Body id="movie-body">
+            <Card.Title id="movie-title">Movies</Card.Title>
+            <Row id="movie-row">
+              {movieResponseData.map((movie, index) => (
+                <Col key={index}>
+                  <p>TITLE: {movie.title}</p>
+                  <p>RELEASE DATE: {movie.releaseDate}</p>
+                  <p>OVERVIEW: {movie.overview}</p>
                 </Col>
               ))}
             </Row>
