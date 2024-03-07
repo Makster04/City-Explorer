@@ -54,7 +54,7 @@ function App() {
             </Col>
           </Row>
         </Form>
-        {showRadar && <img src="radar.gif" alt="Radar" />} {/* Show radar GIF */}
+        {showRadar && <img src="radar2.gif" alt="Radar" />} {/* Show radar GIF */}
       </header>
       {error && <div className="alert alert-danger">{error}</div>}
       {responseData && (
