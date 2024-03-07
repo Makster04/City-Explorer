@@ -157,7 +157,7 @@ button:focus-visible {
 #movie-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  Flex-direction: column;
 }
 
 #movie-row > * {
