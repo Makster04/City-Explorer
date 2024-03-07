@@ -25,7 +25,12 @@ function App() {
       setShowRadar(false); // Hide radar GIF on search
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
       const cityResponse = response.data;
-      const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`);
+      // Include CORS handling for weather API request
+      const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`, {
+        headers: {
+          'Access-Control-Allow-Origin': 'https://clever-kitten-0f4b29.netlify.app'
+        }
+      });
       setResponseData(cityResponse[0]);
       setWeatherResponseData(weatherResponse.data); // Updated state
       setError(null);
