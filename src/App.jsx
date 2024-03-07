@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
@@ -66,67 +65,73 @@ function App() {
       </header>
       {error && <div className="alert alert-danger">{error}</div>}
       {responseData && (
-        <Card>
-          <Card.Body>
-            <Card.Title>Location Details</Card.Title>
-            <Row>
-              <Col>
-                <p><strong>DISPLAY NAME:</strong> {responseData.display_name}</p>
-              </Col>
-              <Col>
-                <p><strong>LATITUDE:</strong> {responseData.lat}</p>
-              </Col>
-              <Col>
-                <p><strong>LONGITUDE:</strong> {responseData.lon}</p>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <img src={`https://maps.locationiq.com/v3/staticmap?key=${API_KEY}&center=${responseData.lat},${responseData.lon}&zoom=9`} style={{ width: '100%' }} alt="Map" />
-              </Col>
-            </Row>
-          </Card.Body>
-        </Card>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title>Location Details</Card.Title>
+                <Row>
+                  <Col>
+                    <p><strong>DISPLAY NAME:</strong> {responseData.display_name}</p>
+                  </Col>
+                  <Col>
+                    <p><strong>LATITUDE:</strong> {responseData.lat}</p>
+                  </Col>
+                  <Col>
+                    <p><strong>LONGITUDE:</strong> {responseData.lon}</p>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <img src={`https://maps.locationiq.com/v3/staticmap?key=${API_KEY}&center=${responseData.lat},${responseData.lon}&zoom=9`} style={{ width: '100%' }} alt="Map" />
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       )}
-      <Row>
-  {weatherResponseData && (
-    <Col>
-      <Card id="weather-card">
-        <Card.Body id="weather-body">
-          <Card.Title id="weather-title">Weather Forecast</Card.Title>
-          <Row id="weather-row">
-            {weatherResponseData.map((forecast, index) => (
-              <Col key={index}>
-                <p>DATE: {forecast.date}</p>
-                <p>DESCRIPTION: {forecast.description}</p>
-                <p>HIGH: {forecast.high}</p>
-                <p>LOW: {forecast.low}</p>
-              </Col>
-            ))}
-          </Row>
-        </Card.Body>
-      </Card>
-    </Col>
-  )}
-  {movieResponseData && (
-    <Col>
-      <Card id="movie-card">
-        <Card.Body id="movie-body">
-          <Card.Title id="movie-title">Movies</Card.Title>
-          <Row id="movie-row">
-            {movieResponseData.map((movie, index) => (
-              <Col key={index}>
-                <p>TITLE: {movie.title}</p>
-                <p>RELEASE DATE: {movie.releaseDate}</p>
-                <p>OVERVIEW: {movie.overview}</p>
-              </Col>
-            ))}
-          </Row>
-        </Card.Body>
-      </Card>
-    </Col>
-  )}
-</Row>
+      {weatherResponseData && (
+        <Row>
+          <Col>
+            <Card id="weather-card">
+              <Card.Body id="weather-body">
+                <Card.Title id="weather-title">Weather Forecast</Card.Title>
+                <Row id="weather-row">
+                  {weatherResponseData.map((forecast, index) => (
+                    <Col key={index}>
+                      <p>DATE: {forecast.date}</p>
+                      <p>DESCRIPTION: {forecast.description}</p>
+                      <p>HIGH: {forecast.high}</p>
+                      <p>LOW: {forecast.low}</p>
+                    </Col>
+                  ))}
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      )}
+      {movieResponseData && (
+        <Row>
+          <Col>
+            <Card id="movie-card">
+              <Card.Body id="movie-body">
+                <Card.Title id="movie-title">Movies</Card.Title>
+                <Row id="movie-row">
+                  {movieResponseData.map((movie, index) => (
+                    <Col key={index}>
+                      <p>TITLE: {movie.title}</p>
+                      <p>RELEASE DATE: {movie.releaseDate}</p>
+                      <p>OVERVIEW: {movie.overview}</p>
+                    </Col>
+                  ))}
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      )}
     </Container>
   );
 }
