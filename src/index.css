@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: #0072CE; /* CIA blue */
-  background: linear-gradient(45deg, #000000 50%, #2C3033 50%); /* Rusty black gradient, representing secrecy */
+  background: linear-gradient(45deg, #201f1f 50%, #2C3033 50%); /* Rusty black gradient, representing secrecy */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility; /* Because we want it to be extra legible */

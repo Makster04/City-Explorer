@@ -11,6 +11,7 @@ function App() {
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showRadar, setShowRadar] = useState(true); // Show radar GIF initially
 
   const handleInput = (event) => {
     const value = event.target.value;
@@ -21,6 +22,7 @@ function App() {
     e.preventDefault();
     try {
       setLoading(true);
+      setShowRadar(false); // Hide radar GIF on search
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
       const cityResponse = response.data;
       const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`);
@@ -52,6 +54,7 @@ function App() {
             </Col>
           </Row>
         </Form>
+        {showRadar && <img src="radar.gif" alt="Radar" />} {/* Show radar GIF */}
       </header>
       {error && <div className="alert alert-danger">{error}</div>}
       {responseData && (
@@ -77,23 +80,22 @@ function App() {
           </Card.Body>
         </Card>
       )}
-     {weatherResponseData && (
-  <Card id="weather-card"> {/* Add unique ID */}
-    <Card.Body id="weather-body">
-      <Card.Title id="weather-title">Weather Forecast</Card.Title>
-      <Row id= "weather-row">
-        {weatherResponseData.map((forecast, index) => (
-          <Col key={index}>
-            <p>DATE: {forecast.date}</p>
-            <p>DESCRIPTION: {forecast.description}</p>
-            <p>HIGH: {forecast.high}</p>
-            <p>LOW: {forecast.low}</p>
-          </Col>
-        ))}
-      </Row>
-    </Card.Body>
-  </Card>
-
+      {weatherResponseData && (
+        <Card id="weather-card"> {/* Add unique ID */}
+          <Card.Body id="weather-body">
+            <Card.Title id="weather-title">Weather Forecast</Card.Title>
+            <Row id="weather-row">
+              {weatherResponseData.map((forecast, index) => (
+                <Col key={index}>
+                  <p>DATE: {forecast.date}</p>
+                  <p>DESCRIPTION: {forecast.description}</p>
+                  <p>HIGH: {forecast.high}</p>
+                  <p>LOW: {forecast.low}</p>
+                </Col>
+              ))}
+            </Row>
+          </Card.Body>
+        </Card>
       )}
     </Container>
   );
