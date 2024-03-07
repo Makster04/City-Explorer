@@ -77,22 +77,23 @@ function App() {
           </Card.Body>
         </Card>
       )}
-      {weatherResponseData && (
-        <Card>
-          <Card.Body>
-            <Card.Title>Weather Forecast</Card.Title>
-            <Row>
-              {weatherResponseData.map((forecast, index) => (
-                <Col key={index}>
-                  <p>Date: {forecast.date}</p>
-                  <p>Description: {forecast.description}</p>
-                  <p>High: {forecast.high}</p>
-                  <p>Low: {forecast.low}</p>
-                </Col>
-              ))}
-            </Row>
-          </Card.Body>
-        </Card>
+     {weatherResponseData && (
+  <Card id="weather-card"> {/* Add unique ID */}
+    <Card.Body>
+      <Card.Title>Weather Forecast</Card.Title>
+      <Row>
+        {weatherResponseData.map((forecast, index) => (
+          <Col key={index}>
+            <p>Date: {forecast.date}</p>
+            <p>Description: {forecast.description}</p>
+            <p>High: {forecast.high}</p>
+            <p>Low: {forecast.low}</p>
+          </Col>
+        ))}
+      </Row>
+    </Card.Body>
+  </Card>
+
       )}
     </Container>
   );
