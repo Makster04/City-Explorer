@@ -128,7 +128,6 @@ button:focus-visible {
   color: #ecf0f1; /* Light gray text color */
 }
 
-/* Movie Card Styles */
 #movie-card {
   width: 800px; /* Increased width for a wider card */
   max-width: calc(100% - 4rem); /* Take full viewport width with padding */
@@ -157,7 +156,7 @@ button:focus-visible {
 #movie-row {
   display: flex;
   flex-wrap: wrap;
-  Flex-direction: column;
+  flex-direction: column; /* Corrected typo */
 }
 
 #movie-row > * {
@@ -169,4 +168,9 @@ button:focus-visible {
   font-size: 1.2rem; /* Larger font size for details */
   margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
   color: #ecf0f1; /* Light gray text color */
+  border-bottom: 1px solid #555; /* Add border bottom */
+}
+
+#movie-row p:last-child {
+  border-bottom: none; /* Remove border bottom for the last paragraph */
 }
