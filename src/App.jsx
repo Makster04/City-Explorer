@@ -90,6 +90,7 @@ function App() {
             </Card>
           </Col>
         </Row>
+      
       )}
       {weatherResponseData && (
         <Row>
@@ -112,6 +113,7 @@ function App() {
           </Col>
         </Row>
       )}
+      
       {movieResponseData && (
         <Row>
           <Col>
