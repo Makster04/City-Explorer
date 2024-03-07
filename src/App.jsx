@@ -100,10 +100,10 @@ function App() {
                 <Row id="weather-row">
                   {weatherResponseData.map((forecast, index) => (
                     <Col key={index}>
-                      <p>DATE: {forecast.date}</p>
-                      <p>DESCRIPTION: {forecast.description}</p>
-                      <p>HIGH: {forecast.high}</p>
-                      <p>LOW: {forecast.low}</p>
+                      <p><strong>DATE:</strong> {forecast.date}</p>
+                      <p><strong>DESCRIPTION:</strong> {forecast.description}</p>
+                      <p><strong>HIGH:</strong> {forecast.high}</p>
+                      <p><strong>SLOW:</strong> {forecast.low}</p>
                     </Col>
                   ))}
                 </Row>
