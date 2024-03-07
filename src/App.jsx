@@ -79,9 +79,9 @@ function App() {
       )}
      {weatherResponseData && (
   <Card id="weather-card"> {/* Add unique ID */}
-    <Card.Body>
-      <Card.Title>Weather Forecast</Card.Title>
-      <Row>
+    <Card.Body id="weather-body">
+      <Card.Title id="weather-title">Weather Forecast</Card.Title>
+      <Row id= "weather-row">
         {weatherResponseData.map((forecast, index) => (
           <Col key={index}>
             <p>Date: {forecast.date}</p>

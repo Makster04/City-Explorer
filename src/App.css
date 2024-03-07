@@ -71,7 +71,7 @@
 
 }
 #weather-card {
-  width: 500px; /* Decreased width for a smaller card */
+  width: 200px; /* Decreased width for a smaller card */
   border: none; /* No border */
   border-radius: 20px; /* Increased border radius for a more rounded look */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adjusted box shadow */
@@ -84,18 +84,28 @@
   transform: scale(1.03); /* Slight scale up on hover */
 }
 
-#weather-card .card-body {
+#weather-body {
   padding: 2rem;
 }
 
-#weather-card .card-title {
+#weather-title {
   font-size: 2rem; /* Larger font size for title */
   margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  color: #a8a8a8; /* Orange title color */
+  color: #e67e22; /* Orange title color */
 }
 
-#weather-card p {
+#weather-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#weather-row > * {
+  flex: 0 0 45%; /* Adjusted width for forecast columns */
   margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  font-size: 1.2rem; /* Larger font size for paragraph */
+}
+
+#weather-row p {
+  font-size: 1.2rem; /* Larger font size for forecast details */
   color: #ecf0f1; /* Light gray text color */
 }
