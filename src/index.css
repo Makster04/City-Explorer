@@ -84,3 +84,89 @@ button:focus-visible {
     background-color: #FF0000; /* Red, signaling danger */
   }
 }
+
+/* Weather Card Styles */
+#weather-card {
+  width: 800px; /* Increased width for a wider card */
+  max-width: calc(100% - 4rem); /* Take full viewport width with padding */
+  margin: 20px auto; /* Added margin for better separation */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
+  background-color: #333; /* Dark card background */
+  transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+#weather-card:hover {
+  transform: scale(1.05); /* Slight scale up on hover */
+}
+
+#weather-body {
+  padding: 2rem;
+}
+
+#weather-title {
+  font-size: 2rem; /* Larger font size for title */
+  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+  color: #00ccff; /* Cyan title color */
+}
+
+#weather-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#weather-row > * {
+  flex: 0 0 45%; /* Adjusted width for columns */
+  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+}
+
+#weather-row p {
+  font-size: 1.2rem; /* Larger font size for details */
+  margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
+  color: #ecf0f1; /* Light gray text color */
+}
+
+/* Movie Card Styles */
+#movie-card {
+  width: 800px; /* Increased width for a wider card */
+  max-width: calc(100% - 4rem); /* Take full viewport width with padding */
+  margin: 20px auto; /* Added margin for better separation */
+  border: none; /* No border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
+  background-color: #333; /* Dark card background */
+  transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+#movie-card:hover {
+  transform: scale(1.05); /* Slight scale up on hover */
+}
+
+#movie-body {
+  padding: 2rem;
+}
+
+#movie-title {
+  font-size: 2rem; /* Larger font size for title */
+  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+  color: #00ccff; /* Cyan title color */
+}
+
+#movie-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#movie-row > * {
+  flex: 0 0 45%; /* Adjusted width for columns */
+  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+}
+
+#movie-row p {
+  font-size: 1.2rem; /* Larger font size for details */
+  margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
+  color: #ecf0f1; /* Light gray text color */
+}
