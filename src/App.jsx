@@ -89,40 +89,44 @@ function App() {
         </Card>
       )}
       <Row>
-        {weatherResponseData && (
-          <Col md={6}>
-            <Card>
-              <Card.Body>
-                <Card.Title>Weather Forecast</Card.Title>
-                {weatherResponseData.map((forecast, index) => (
-                  <div key={index}>
-                    <p>DATE: {forecast.date}</p>
-                    <p>DESCRIPTION: {forecast.description}</p>
-                    <p>HIGH: {forecast.high}</p>
-                    <p>LOW: {forecast.low}</p>
-                  </div>
-                ))}
-              </Card.Body>
-            </Card>
-          </Col>
-        )}
-        {movieResponseData && (
-          <Col md={6}>
-            <Card>
-              <Card.Body>
-                <Card.Title>Movies</Card.Title>
-                {movieResponseData.map((movie, index) => (
-                  <div key={index}>
-                    <p>TITLE: {movie.title}</p>
-                    <p>RELEASE DATE: {movie.releaseDate}</p>
-                    <p>OVERVIEW: {movie.overview}</p>
-                  </div>
-                ))}
-              </Card.Body>
-            </Card>
-          </Col>
-        )}
-      </Row>
+  {weatherResponseData && (
+    <Col>
+      <Card id="weather-card">
+        <Card.Body id="weather-body">
+          <Card.Title id="weather-title">Weather Forecast</Card.Title>
+          <Row id="weather-row">
+            {weatherResponseData.map((forecast, index) => (
+              <Col key={index}>
+                <p>DATE: {forecast.date}</p>
+                <p>DESCRIPTION: {forecast.description}</p>
+                <p>HIGH: {forecast.high}</p>
+                <p>LOW: {forecast.low}</p>
+              </Col>
+            ))}
+          </Row>
+        </Card.Body>
+      </Card>
+    </Col>
+  )}
+  {movieResponseData && (
+    <Col>
+      <Card id="movie-card">
+        <Card.Body id="movie-body">
+          <Card.Title id="movie-title">Movies</Card.Title>
+          <Row id="movie-row">
+            {movieResponseData.map((movie, index) => (
+              <Col key={index}>
+                <p>TITLE: {movie.title}</p>
+                <p>RELEASE DATE: {movie.releaseDate}</p>
+                <p>OVERVIEW: {movie.overview}</p>
+              </Col>
+            ))}
+          </Row>
+        </Card.Body>
+      </Card>
+    </Col>
+  )}
+</Row>
     </Container>
   );
 }
