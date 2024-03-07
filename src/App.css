@@ -68,23 +68,15 @@
 
 .text-danger {
   color: #ff5050; /* Red text color */
-}
-.card {
-  width: 600px; /* Increase width for a larger card */
-  border: none; /* No border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
-  margin: 0 auto;
-  background-color: #333; /* Dark card background */
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
+
 }
 #weather-card {
-  width: 200px; /* Increase width for a larger card */
+  width: 500px; /* Decreased width for a smaller card */
   border: none; /* No border */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
   margin: 20px auto; /* Added margin for better separation */
-  background-color: #1f1f1f; /* Darker card background */
+  background-color: #222; /* Darker card background */
   transition: transform 0.3s ease; /* Smooth transformation on hover */
 }
 
@@ -100,14 +92,4 @@
   font-size: 2rem; /* Larger font size for title */
   margin-bottom: 1rem; /* Adjusted margin for better spacing */
   color: #ff9900; /* Orange title color */
-}
-
-#weather-card p {
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  font-size: 1.2rem; /* Larger font size for paragraph */
-  color: #ddd; /* Light gray text color */
-}
-
-#weather-card .text-danger {
-  color: #ff6666; /* Lighter red text color */
 }
