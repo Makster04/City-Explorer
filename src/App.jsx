@@ -84,10 +84,10 @@ function App() {
       <Row id= "weather-row">
         {weatherResponseData.map((forecast, index) => (
           <Col key={index}>
-            <p>Date: {forecast.date}</p>
-            <p>Description: {forecast.description}</p>
-            <p>High: {forecast.high}</p>
-            <p>Low: {forecast.low}</p>
+            <p>DATE: {forecast.date}</p>
+            <p>DESCRIPTION: {forecast.description}</p>
+            <p>HIGH: {forecast.high}</p>
+            <p>LOW: {forecast.low}</p>
           </Col>
         ))}
       </Row>
