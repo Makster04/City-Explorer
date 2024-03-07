@@ -20,6 +20,10 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!city) {
+      setError('Please enter a city name.');
+      return;
+    }
     try {
       setLoading(true);
       setShowRadar(false); // Hide radar GIF on search
