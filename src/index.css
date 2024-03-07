@@ -12,7 +12,7 @@
   -webkit-font-smoothing: subpixel-antialiased; /* Super smooth, like a polished mirror */
   -moz-osx-font-smoothing: grayscale; /* Adding a touch of old school */
 
-  transform: rotate(5deg) scale(1.1); /* Wild and unpredictable */
+  transform: rotate(5deg) scale(1.0); /* Wild and unpredictable */
 }
 
 a {
