@@ -71,8 +71,8 @@
 
 }
 #weather-card {
-  width: 180px; /* Decreased width for a smaller card */
-  border: none; /* No border */
+  width: 500px; /* Decreased width for a smaller card */
+  border: forestgreen; /* No border */
   border-radius: 15px; /* Adjusted border radius for a more rounded look */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adjusted box shadow */
   margin: 20px auto; /* Added margin for better separation */
