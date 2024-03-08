@@ -123,9 +123,9 @@ function App() {
                 <Row id="movie-row">
                   {movieResponseData.map((movie, index) => (
                     <Col key={index}>
-                      <p>TITLE: {movie.title}</p>
-                      <p>RELEASE DATE: {movie.releaseDate}</p>
-                      <p>OVERVIEW: {movie.overview}</p>
+                      <p><strong>TITLE:</strong>{movie.title}</p>
+                      <p><strong>RELEASE DATE:</strong> {movie.releaseDate}</p>
+                      <p><strong>OVERVIEW:</strong>{movie.overview}</p>
                     </Col>
                   ))}
                 </Row>
