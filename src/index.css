@@ -4,6 +4,7 @@
 /* General Styling */
 body {
   font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(45deg, #000 25%, transparent 25%), linear-gradient(-45deg, #000 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #000 75%), linear-gradient(-45deg, transparent 75%, #000 75%);
   background-color: #000;
   color: #fff;
   display: flex;
@@ -140,18 +141,4 @@ body {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #4a4a4a;
-}
-
-/* Radar Animation */
-@keyframes radarSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.radar-img {
-  animation: radarSpin 2s linear infinite;
 }
