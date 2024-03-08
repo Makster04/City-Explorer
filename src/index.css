@@ -1,18 +1,14 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 /* General Styling */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(45deg, #000 25%, transparent 25%), linear-gradient(-45deg, #000 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #000 75%), linear-gradient(-45deg, transparent 75%, #000 75%);
-  background-color: #000;
+  font-family: 'Adventure Regular', cursive;
+  background-color: #000000; /* Dark background */
   color: #fff;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items at the start of the cross axis (top of the container) */
+  align-items: flex-start;
   height: 100vh;
-  margin: 50px;
-  padding: 0; /* Removed padding */
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -24,9 +20,9 @@ body {
   font-size: 4rem;
   font-weight: 700;
   font-style: italic;
-  color: #961c1c;
+  color: #ffcc29; /* Gold color */
   animation: animateTitle 1.5s infinite alternate;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Add shadow */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes animateTitle {
@@ -34,13 +30,13 @@ body {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
 /* Form Styles */
 .form-control {
-  border: 2px solid #777;
+  border: 2px solid #4d4d4d; /* Dark border */
   border-radius: 8px;
   padding: 10px 20px;
   width: 300px;
@@ -50,36 +46,34 @@ body {
 
 /* Button Styles */
 .btn-primary {
-  background-color: #ff7e67;
-  border-color: #ff7e67;
+  background-color: #c8a55e; /* Ancient gold color */
+  border-color: #c8a55e;
   color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
   transition: all 0.3s ease;
-  position: relative;
-  top: 30px; /* Move the button down */
 }
 
 .btn-primary:hover {
-  background-color: #ff5440;
-  border-color: #ff5440;
-  color: #000;
-  animation: spin 2s linear infinite;
+  background-color: #a3834e; /* Darker gold on hover */
+  border-color: #a3834e;
+  color: #fff;
+  animation: pulse 1s infinite alternate;
 }
 
 /* Unique Animation Style for Search Button */
-@keyframes spin {
+@keyframes pulse {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1.1);
   }
 }
 
 /* Card Styles */
 .card {
-  background-color: #f0f0f0;
+  background-color: #333; /* Dark card background */
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -89,11 +83,11 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center;
 }
 
 .card:not(:last-child) {
-  margin-right: 20px; /* Added margin between cards */
+  margin-right: 20px;
 }
 
 .card:hover {
@@ -102,16 +96,17 @@ body {
 }
 
 .location-card {
-  border-top: 5px solid #5ad3f8;
-  margin-inline: 300px;
+  margin-inline: 600px;
+  border-top: 5px solid #ffcc29; /* Gold color */
 }
 
 .weather-card {
-  border-top: 5px solid #ffcc29;
+  margin-inline: 200px;
+  border-top: 5px solid #ffcc29; /* Gold color */
 }
 
 .movie-card {
-  border-top: 5px solid #6ab187;
+  border-top: 5px solid #ffcc29; /* Gold color */
 }
 
 /* Card Title Styles */
@@ -119,7 +114,7 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #b81b1b;
+  color: #ffcc29; /* Gold color */
 }
 
 /* Card Row Styles */
@@ -140,5 +135,5 @@ body {
 .card p {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #4a4a4a;
+  color: #fff;
 }
