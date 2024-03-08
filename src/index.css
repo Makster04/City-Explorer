@@ -3,7 +3,13 @@
 /* General Styling */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #eaeaea;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .header {
@@ -31,6 +37,10 @@ body {
 .form-control {
   border: 2px solid #777;
   border-radius: 8px;
+  padding: 10px 20px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 /* Button Styles */
