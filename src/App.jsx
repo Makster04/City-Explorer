@@ -8,7 +8,7 @@ const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 function App() {
   const [responseData, setResponseData] = useState(null);
   const [weatherResponseData, setWeatherResponseData] = useState(null);
-  const [movieResponseData, setMovieResponseData] = useState(null); // New state for movie data
+  const [movieResponseData, setMovieResponseData] = useState(null); 
   const [error, setError] = useState(null);
   const [city, setCity] = useState('');
   const [loading, setLoading] = useState(false);
@@ -31,10 +31,10 @@ function App() {
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
       const cityResponse = response.data;
       const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`);
-      const movieResponse = await axios.get(`http://localhost:3000/movies/${city}`); // Fetch movie data
+      const movieResponse = await axios.get(`http://localhost:3000/movies/${city}`);
       setResponseData(cityResponse[0]);
       setWeatherResponseData(weatherResponse.data);
-      setMovieResponseData(movieResponse.data); // Update movie data state
+      setMovieResponseData(movieResponse.data);
       setError(null);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -67,17 +67,13 @@ function App() {
       {responseData && (
         <Row>
           <Col>
-            <Card>
+            <Card className="location-card">
               <Card.Body>
                 <Card.Title>Location Details</Card.Title>
                 <Row>
                   <Col>
                     <p><strong>DISPLAY NAME:</strong> {responseData.display_name}</p>
-                  </Col>
-                  <Col>
                     <p><strong>LATITUDE:</strong> {responseData.lat}</p>
-                  </Col>
-                  <Col>
                     <p><strong>LONGITUDE:</strong> {responseData.lon}</p>
                   </Col>
                 </Row>
@@ -90,21 +86,21 @@ function App() {
             </Card>
           </Col>
         </Row>
-      
       )}
+
       {weatherResponseData && (
         <Row>
           <Col>
-            <Card id="weather-card">
-              <Card.Body id="weather-body">
-                <Card.Title id="weather-title">Weather Forecast</Card.Title>
-                <Row id="weather-row">
+            <Card className="weather-card">
+              <Card.Body>
+                <Card.Title>Weather Forecast</Card.Title>
+                <Row className="weather-row">
                   {weatherResponseData.map((forecast, index) => (
                     <Col key={index}>
                       <p><strong>DATE:</strong> {forecast.date}</p>
                       <p><strong>DESCRIPTION:</strong> {forecast.description}</p>
                       <p><strong>HIGH:</strong> {forecast.high}</p>
-                      <p><strong>SLOW:</strong> {forecast.low}</p>
+                      <p><strong>LOW:</strong> {forecast.low}</p>
                     </Col>
                   ))}
                 </Row>
@@ -117,10 +113,10 @@ function App() {
       {movieResponseData && (
         <Row>
           <Col>
-            <Card id="movie-card">
-              <Card.Body id="movie-body">
-                <Card.Title id="movie-title">Movies</Card.Title>
-                <Row id="movie-row">
+            <Card className="movie-card">
+              <Card.Body>
+                <Card.Title>Movies</Card.Title>
+                <Row className="movie-row">
                   {movieResponseData.map((movie, index) => (
                     <Col key={index}>
                       <p><strong>TITLE:</strong> {movie.title}</p>

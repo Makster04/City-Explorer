@@ -1,190 +1,57 @@
-:root {
-  font-family: 'Garamond', serif; /* Because why not? */
-  line-height: 2; /* Let's make it spacious and playful */
-  font-weight: 200; /* Light and airy, like a butterfly */
-
-  color-scheme: light dark;
-  color: #0072CE; /* CIA blue */
-  background: linear-gradient(45deg, #201f1f 50%, #2C3033 50%); /* Rusty black gradient, representing secrecy */
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility; /* Because we want it to be extra legible */
-  -webkit-font-smoothing: subpixel-antialiased; /* Super smooth, like a polished mirror */
-  -moz-osx-font-smoothing: grayscale; /* Adding a touch of old school */
-
-  transform: rotate(5deg) scale(1.0); /* Wild and unpredictable */
-}
-
-a {
-  font-weight: 1000; /* Maximum boldness, because why not? */
-  color: #181818; /* Black, representing table */
-  text-decoration: underline overline; /* Let's go wild with decorations */
-  transition: color 5s ease-out; /* Slow, like a leisurely stroll through Gotham */
-}
-a:hover {
-  color: #FF0000; /* Red, signaling danger */
-}
-
+/* General Styling */
 body {
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 50%; /* Filling up every inch of screen space */
-  min-height: 50vh; /* Reaching for the stars */
+  font-family: Arial, sans-serif;
 }
 
-h1 {
-  font-size: 6em; /* Massive, like a skyscraper */
-  line-height: 1; /* Let's make it tight and compact */
-  color: #9e1010; /* Dark red, representing intense alert */
-  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.8); /* Blindingly bright */
-  animation: pulse 1s infinite alternate; /* Pulse animation */
+.container {
+  margin-top: 50px;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-button {
-  border-radius: 50%; /* Because circles are cool */
-  border: 5px dashed #FF0000; /* Red, signaling danger */
-  padding: 1em 2em; /* Because bigger is better */
-  font-size: 1em; /* Huge and humongous */
-  background-color: #000000; /* Rusty black, representing secrecy */
-  color: #ff0000; /* Red, signaling danger */
-  cursor: help; /* Just to mess with expectations */
-  transition: all 1s cubic-bezier(0.5, 0, 0.5, 1); /* Slow and dramatic */
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Dark shadow */
-}
-button:hover {
-  transform: scale(1.5) rotate(180deg); /* Because why not spin things around? */
-  background-color: rgba(255, 255, 255, 0.8); /* Yellow, representing intelligence */
-}
-button:focus,
-button:focus-visible {
-  outline: 5px dashed #FF0000; /* Bold and brash */
-  box-shadow: 0 0 0 25px rgba(255, 0, 0, 0.7); /* Red, signaling danger */
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #161616; /* Dark gray, representing shadow */
-    background-color: #FFFFFF; /* White, representing purity */
-  }
-  a:hover {
-    color: #FF0000; /* Red, signaling danger */
-  }
-  button {
-    background-color: #FF0000; /* Red, signaling danger */
-  }
+/* Location Card Styles */
+.location-card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  padding: 20px;
 }
 
 /* Weather Card Styles */
-#weather-card {
-  width: 800px; /* Increased width for a wider card */
-  max-width: calc(100% - 4rem); /* Take full viewport width with padding */
-  margin: 20px auto; /* Added margin for better separation */
-  border: none; /* No border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
-  background-color: #333; /* Dark card background */
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
+.weather-card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  padding: 20px;
 }
 
-#weather-card:hover {
-  transform: scale(1.05); /* Slight scale up on hover */
-}
-
-#weather-body {
-  padding: 2rem;
-}
-
-#weather-title {
-  font-size: 2rem; /* Larger font size for title */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  color: #00ccff; /* Cyan title color */
-}
-
-#weather-row {
+.weather-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-#weather-row > * {
-  flex: 0 0 45%; /* Adjusted width for columns */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+.weather-row > * {
+  flex: 0 0 45%;
+  margin-bottom: 1rem;
 }
 
-#weather-row p {
-  font-size: 1.2rem; /* Larger font size for details */
-  margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
-  color: #ecf0f1; /* Light gray text color */
+/* Movie Card Styles */
+.movie-card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  padding: 20px;
 }
 
-#movie-card {
-  width: 1000px; /* Increased width for a wider card */
-  max-width: calc(100% - 4rem); /* Take full viewport width with padding */
-  margin: 20px auto; /* Added margin for better separation */
-  border: none; /* No border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
-  background-color: #333; /* Dark card background */
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
-}
-
-#movie-card:hover {
-  transform: scale(1.05); /* Slight scale up on hover */
-}
-
-#movie-body {
-  padding: 2rem;
-}
-
-#movie-title {
-  font-size: 2rem; /* Keep the title font size the same */
-  margin-bottom: 1rem; /* Keep the margin bottom the same */
-  color: #00ccff; /* Keep the title color the same */
-}
-
-#movie-row {
+.movie-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-#movie-row > * {
-  flex: 0 0 45%; /* Keep the column width the same */
-  margin-bottom: 1rem; /* Keep the margin bottom the same */
-}
-
-#movie-row p {
-  font-size: 1rem; /* Adjust font size for movie details to be smaller */
-  margin-bottom: 1rem; /* Adjust margin bottom for better spacing */
-  color: #ecf0f1; /* Keep the text color the same */
-  padding: 0.5rem; /* Add padding to create boxes around movie details */
-  border: 1px solid #ffffff; /* Add border to create boxes around movie details */
-  border-radius: 5px; /* Add border radius for rounded corners */
-}
-
-#movie-row p:last-child {
-  margin-bottom: 4; /* Remove margin bottom for the last paragraph */
-}
-
-#weather-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted width for columns */
-  grid-gap: 1rem; /* Adjusted gap between columns */
-}
-
-#movie-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted width for columns */
-  grid-gap: 1rem; /* Adjusted gap between columns */
+.movie-row > * {
+  flex: 0 0 45%;
+  margin-bottom: 1rem;
 }
