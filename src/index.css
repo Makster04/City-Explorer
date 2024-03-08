@@ -1,57 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
 }
 
-.container {
-  margin-top: 50px;
+.header {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-/* Location Card Styles */
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  animation: animateTitle 2s infinite alternate;
+}
+
+@keyframes animateTitle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Form Styles */
+.form-control {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .location-card {
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa;
-  padding: 20px;
+  border-top: 5px solid #007bff;
 }
 
-/* Weather Card Styles */
 .weather-card {
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa;
-  padding: 20px;
+  border-top: 5px solid #28a745;
 }
 
-.weather-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.weather-row > * {
-  flex: 0 0 45%;
-  margin-bottom: 1rem;
-}
-
-/* Movie Card Styles */
 .movie-card {
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa;
-  padding: 20px;
+  border-top: 5px solid #ffc107;
 }
 
+/* Card Title Styles */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Card Row Styles */
+.weather-row,
 .movie-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.weather-row > *,
 .movie-row > * {
   flex: 0 0 45%;
   margin-bottom: 1rem;
+}
+
+/* Card Paragraph Styles */
+.card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Radar Animation */
+@keyframes radarSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-img {
+  animation: radarSpin 2s linear infinite;
 }
