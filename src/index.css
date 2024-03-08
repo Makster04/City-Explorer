@@ -176,3 +176,15 @@ button:focus-visible {
 #movie-row p:last-child {
   margin-bottom: 4; /* Remove margin bottom for the last paragraph */
 }
+
+#weather-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted width for columns */
+  grid-gap: 1rem; /* Adjusted gap between columns */
+}
+
+#movie-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted width for columns */
+  grid-gap: 1rem; /* Adjusted gap between columns */
+}
