@@ -129,7 +129,7 @@ button:focus-visible {
 }
 
 #movie-card {
-  width: 800px; /* Increased width for a wider card */
+  width: 1000px; /* Increased width for a wider card */
   max-width: calc(100% - 4rem); /* Take full viewport width with padding */
   margin: 20px auto; /* Added margin for better separation */
   border: none; /* No border */
@@ -151,10 +151,6 @@ button:focus-visible {
   font-size: 2rem; /* Keep the title font size the same */
   margin-bottom: 1rem; /* Keep the margin bottom the same */
   color: #00ccff; /* Keep the title color the same */
-}
-
-#movie-row {
-  /* Existing styling for the movie card row */
 }
 
 #movie-row > * {
