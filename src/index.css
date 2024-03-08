@@ -9,8 +9,6 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  animation: floatUp 5s infinite alternate; /* Animation for floating effect */
-
 }
 
 .header {
@@ -94,7 +92,7 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -141,16 +139,4 @@ body {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #fff;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0); /* Initial position */
-  }
-  50% {
-    transform: translateY(-10px); /* Float up */
-  }
-  100% {
-    transform: translateY(0); /* Return to initial position */
-  }
 }
