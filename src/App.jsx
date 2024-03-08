@@ -46,8 +46,8 @@ function App() {
 
   return (
     <Container>
-      <header>
-        <h1>Location Watchlist</h1>
+      <header className="header">
+        <h1 className="main-title">Location Watchlist</h1>
         <h2>Geolocation:</h2>
         <Form onSubmit={handleSubmit}>
           <Row className="mb-3">
@@ -135,3 +135,4 @@ function App() {
 }
 
 export default App;
+
