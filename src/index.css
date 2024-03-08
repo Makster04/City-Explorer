@@ -153,6 +153,12 @@ button:focus-visible {
   color: #00ccff; /* Keep the title color the same */
 }
 
+#movie-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 #movie-row > * {
   flex: 0 0 45%; /* Keep the column width the same */
   margin-bottom: 1rem; /* Keep the margin bottom the same */
@@ -162,9 +168,11 @@ button:focus-visible {
   font-size: 1rem; /* Adjust font size for movie details to be smaller */
   margin-bottom: 0.5rem; /* Adjust margin bottom for better spacing */
   color: #ecf0f1; /* Keep the text color the same */
-  border-bottom: 1px solid #555; /* Keep the border bottom the same */
+  padding: 0.5rem; /* Add padding to create boxes around movie details */
+  border: 1px solid #555; /* Add border to create boxes around movie details */
+  border-radius: 5px; /* Add border radius for rounded corners */
 }
 
 #movie-row p:last-child {
-  border-bottom: none; /* Keep the last paragraph without a border bottom */
+  margin-bottom: 0; /* Remove margin bottom for the last paragraph */
 }
