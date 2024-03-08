@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* General Styling */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #000;
   color: #fff;
   display: flex;
@@ -19,10 +20,12 @@ body {
 }
 
 .main-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
-  color: #4a4a4a;
-  animation: animateTitle 2s infinite alternate;
+  font-style: italic;
+  color: #961c1c;
+  animation: animateTitle 1.5s infinite alternate;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Add shadow */
 }
 
 @keyframes animateTitle {
@@ -48,12 +51,29 @@ body {
 .btn-primary {
   background-color: #ff7e67;
   border-color: #ff7e67;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
   transition: all 0.3s ease;
+  position: relative;
+  top: 30px; /* Move the button down */
 }
 
 .btn-primary:hover {
   background-color: #ff5440;
   border-color: #ff5440;
+  color: #000;
+  animation: spin 2s linear infinite;
+}
+
+/* Unique Animation Style for Search Button */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Card Styles */
@@ -83,7 +103,6 @@ body {
 .location-card {
   border-top: 5px solid #5ad3f8;
   margin-inline: 300px;
-
 }
 
 .weather-card {
@@ -99,7 +118,7 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #333;
+  color: #b81b1b;
 }
 
 /* Card Row Styles */
