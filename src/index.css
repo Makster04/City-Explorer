@@ -82,7 +82,7 @@ body {
 
 .location-card {
   border-top: 5px solid #5ad3f8;
-  width: calc(50% - 30px); /* Adjusted width to fit two cards in a row */
+  margin-inline: 300px;
 
 }
 
