@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './App.css';
+import RadarImage from "./assets/radar2.gif";
 
 const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
@@ -61,7 +62,7 @@ function App() {
             </Col>
           </Row>
         </Form>
-        {showRadar && <img src="radar2.gif" alt="Radar" />}
+        {showRadar && <img src={RadarImage} alt="Radar" />}
       </header>
       {error && <div className="alert alert-danger">{error}</div>}
       {responseData && (
