@@ -52,7 +52,7 @@ function App() {
         <Form onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Col>
-              <Form.Control type="text" placeholder="Only Seattle, Paris, Amman for now" onChange={handleInput} />
+              <Form.Control type="text" placeholder="Search a City" onChange={handleInput} />
             </Col>
             <Col>
               <Button type="submit" variant="primary" disabled={loading}>
