@@ -2,16 +2,16 @@
   font-family: 'Garamond', serif; /* Because why not? */
   line-height: 2; /* Let's make it spacious and playful */
   font-weight: 200; /* Light and airy, like a butterfly */
-
+  
   color-scheme: light dark;
   color: #0072CE; /* CIA blue */
   background: linear-gradient(45deg, #201f1f 50%, #2C3033 50%); /* Rusty black gradient, representing secrecy */
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility; /* Because we want it to be extra legible */
   -webkit-font-smoothing: subpixel-antialiased; /* Super smooth, like a polished mirror */
   -moz-osx-font-smoothing: grayscale; /* Adding a touch of old school */
-
+  
   transform: rotate(5deg) scale(1.0); /* Wild and unpredictable */
 }
 
@@ -167,12 +167,5 @@ button:focus-visible {
 #movie-row p {
   font-size: 1rem; /* Adjust font size for movie details to be smaller */
   margin-bottom: 1rem; /* Adjust margin bottom for better spacing */
-  color: #ecf0f1; /* Keep the text color the same */
-  padding: 0.5rem; /* Add padding to create boxes around movie details */
-  border: 1px solid #ffffff; /* Add border to create boxes around movie details */
-  border-radius: 5px; /* Add border radius for rounded corners */
-}
-
-#movie-row p:last-child {
-  margin-bottom: 0; /* Remove margin bottom for the last paragraph */
+  color: #ecf
 }
