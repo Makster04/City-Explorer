@@ -46,8 +46,8 @@ function App() {
 
   return (
     <Container>
-      <header className="header">
-        <h1 className="main-title">Location Watchlist</h1>
+      <header>
+        <h1>Location Watchlist</h1>
         <h2>Geolocation:</h2>
         <Form onSubmit={handleSubmit}>
           <Row className="mb-3">
@@ -61,7 +61,7 @@ function App() {
             </Col>
           </Row>
         </Form>
-        {showRadar && <img src="radar2.gif" alt="Radar" className="radar-img" />}
+        {showRadar && <img src="radar2.gif" alt="Radar" />}
       </header>
       {error && <div className="alert alert-danger">{error}</div>}
       {responseData && (
