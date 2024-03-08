@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-  font-family: 'Adventure Regular', cursive;
+  font-family: 'Arial', sans-serif; /* Change font to Arial for readability */
   background-color: #000000; /* Dark background */
   color: #fff;
   display: flex;
@@ -22,7 +22,7 @@ body {
   font-style: italic;
   color: #ffcc29; /* Gold color */
   animation: animateTitle 1.5s infinite alternate;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes animateTitle {
@@ -52,6 +52,7 @@ body {
   padding: 10px 20px;
   border-radius: 25px;
   transition: all 0.3s ease;
+  margin-top: 20px; /* Adjusted margin-top for the search button */
 }
 
 .btn-primary:hover {
@@ -101,12 +102,14 @@ body {
 }
 
 .weather-card {
-  margin-inline: 200px;
+  margin-inline: 250px;
   border-top: 5px solid #ffcc29; /* Gold color */
 }
 
 .movie-card {
-  border-top: 5px solid #ffcc29; /* Gold color */
+    margin-inline: 20px;
+    border-top: 5px solid #ffcc29; /* Gold color */
+
 }
 
 /* Card Title Styles */
