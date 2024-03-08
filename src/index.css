@@ -148,29 +148,27 @@ button:focus-visible {
 }
 
 #movie-title {
-  font-size: 2rem; /* Larger font size for title */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  color: #00ccff; /* Cyan title color */
+  font-size: 2rem; /* Keep the title font size the same */
+  margin-bottom: 1rem; /* Keep the margin bottom the same */
+  color: #00ccff; /* Keep the title color the same */
 }
 
 #movie-row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column-reverse; /* Corrected typo */
+  /* Existing styling for the movie card row */
 }
 
 #movie-row > * {
-  flex: 0 0 45%; /* Adjusted width for columns */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
+  flex: 0 0 45%; /* Keep the column width the same */
+  margin-bottom: 1rem; /* Keep the margin bottom the same */
 }
 
 #movie-row p {
-  font-size: 1.2rem; /* Larger font size for details */
-  margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
-  color: #ecf0f1; /* Light gray text color */
-  border-bottom: 1px solid #555; /* Add border bottom */
+  font-size: 1rem; /* Adjust font size for movie details to be smaller */
+  margin-bottom: 0.5rem; /* Adjust margin bottom for better spacing */
+  color: #ecf0f1; /* Keep the text color the same */
+  border-bottom: 1px solid #555; /* Keep the border bottom the same */
 }
 
 #movie-row p:last-child {
-  border-bottom: none; /* Remove border bottom for the last paragraph */
+  border-bottom: none; /* Keep the last paragraph without a border bottom */
 }
