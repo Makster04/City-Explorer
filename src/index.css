@@ -156,7 +156,7 @@ button:focus-visible {
 #movie-row {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column; /* Corrected typo */
+  flex-direction: column-reverse; /* Corrected typo */
 }
 
 #movie-row > * {

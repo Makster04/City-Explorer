@@ -93,7 +93,7 @@ function App() {
       
       )}
       {weatherResponseData && (
-        <Row id= "weather-card">
+        <Row>
           <Col>
             <Card id="weather-card">
               <Card.Body id="weather-body">
@@ -115,7 +115,7 @@ function App() {
       )}
 
       {movieResponseData && (
-        <Row id='movie-card'>
+        <Row>
           <Col>
             <Card id="movie-card">
               <Card.Body id="movie-body">
