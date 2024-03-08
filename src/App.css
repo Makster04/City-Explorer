@@ -1,157 +1,100 @@
-#root {
-  max-width: 100vw; /* Take full viewport width */
-  margin: 0;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+/* General Styling */
+body {
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #f5f5f5;
+}
+
+.header {
   text-align: center;
-  background-color: #000000; /* Dark background color */
-  color: #fff; /* White text color */
+  margin-bottom: 50px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #00ff00); /* Green drop shadow on hover */
+/* Form Styles */
+.form-control {
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #ff6600); /* Orange drop shadow on hover for React logo */
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.location-card {
+  border-top: 5px solid #007bff;
+}
+
+.weather-card {
+  border-top: 5px solid #28a745;
+}
+
+.movie-card {
+  border-top: 5px solid #ffc107;
+}
+
+/* Card Title Styles */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Card Row Styles */
+.weather-row,
+.movie-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.weather-row > *,
+.movie-row > * {
+  flex: 0 0 45%;
+  margin-bottom: 1rem;
+}
+
+/* Card Paragraph Styles */
+.card p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Radar Animation */
+@keyframes radarSpin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  width: 600px; /* Increase width for a larger card */
-  border: none; /* No border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
-  margin: 0 auto;
-  background-color: #333; /* Dark card background */
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
-}
-
-.card:hover {
-  transform: scale(1.05); /* Slight scale up on hover */
-}
-
-.card-body {
-  padding: 2rem;
-}
-
-.card-title {
-  font-size: 2rem; /* Larger font size for title */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  color: #00ccff; /* Cyan title color */
-}
-
-.card p {
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  font-size: 1.2rem; /* Larger font size for paragraph */
-}
-
-.text-danger {
-  color: #ff5050; /* Red text color */
-
-}
-/* Weather Card Styles */
-#weather-card {
-  width: 800px; /* Increased width for a wider card */
-  max-width: calc(100% - 4rem); /* Take full viewport width with padding */
-  margin: 20px auto; /* Added margin for better separation */
-  border: none; /* No border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
-  background-color: #333; /* Dark card background */
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
-}
-
-#weather-card:hover {
-  transform: scale(1.05); /* Slight scale up on hover */
-}
-
-#weather-body {
-  padding: 2rem;
-}
-
-#weather-title {
-  font-size: 2rem; /* Larger font size for title */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  color: #00ccff; /* Cyan title color */
-}
-
-#weather-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-#weather-row > * {
-  flex: 0 0 45%; /* Adjusted width for columns */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-}
-
-#weather-row p {
-  font-size: 1.2rem; /* Larger font size for details */
-  margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
-  color: #ecf0f1; /* Light gray text color */
-}
-
-/* Movie Card Styles */
-#movie-card {
-  width: 800px; /* Increased width for a wider card */
-  max-width: calc(100% - 4rem); /* Take full viewport width with padding */
-  margin: 20px auto; /* Added margin for better separation */
-  border: none; /* No border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Soft glowing effect */
-  background-color: #333; /* Dark card background */
-  transition: transform 0.3s ease; /* Smooth transformation on hover */
-}
-
-#movie-card:hover {
-  transform: scale(1.05); /* Slight scale up on hover */
-}
-
-#movie-body {
-  padding: 2rem;
-}
-
-#movie-title {
-  font-size: 2rem; /* Larger font size for title */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-  color: #00ccff; /* Cyan title color */
-}
-
-#movie-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-#movie-row > * {
-  flex: 0 0 45%; /* Adjusted width for columns */
-  margin-bottom: 1rem; /* Adjusted margin for better spacing */
-}
-
-#movie-row p {
-  font-size: 1.2rem; /* Larger font size for details */
-  margin-bottom: 0.5rem; /* Adjusted margin for better spacing */
-  color: #ecf0f1; /* Light gray text color */
+.radar-img {
+  animation: radarSpin 2s linear infinite;
 }
