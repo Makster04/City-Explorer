@@ -166,10 +166,10 @@ button:focus-visible {
 
 #movie-row p {
   font-size: 1rem; /* Adjust font size for movie details to be smaller */
-  margin-bottom: 0.5rem; /* Adjust margin bottom for better spacing */
+  margin-bottom: 1rem; /* Adjust margin bottom for better spacing */
   color: #ecf0f1; /* Keep the text color the same */
   padding: 0.5rem; /* Add padding to create boxes around movie details */
-  border: 1px solid #555; /* Add border to create boxes around movie details */
+  border: 1px solid #ffffff; /* Add border to create boxes around movie details */
   border-radius: 5px; /* Add border radius for rounded corners */
 }
 
