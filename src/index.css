@@ -9,6 +9,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  animation: floatUp 5s infinite alternate; /* Animation for floating effect */
+
 }
 
 .header {
@@ -139,4 +141,16 @@ body {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #fff;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0); /* Initial position */
+  }
+  50% {
+    transform: translateY(-10px); /* Float up */
+  }
+  100% {
+    transform: translateY(0); /* Return to initial position */
+  }
 }

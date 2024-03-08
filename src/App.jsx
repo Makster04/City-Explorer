@@ -121,8 +121,8 @@ function App() {
                   {movieResponseData.map((movie, index) => (
                     <Col key={index}>
                       <p><strong>TITLE:</strong> {movie.title}</p>
-                      <p><strong>RELEASE DATE:</strong> {movie.releaseDate}</p>
-                      <p><strong>OVERVIEW:</strong> {movie.overview}</p>
+                      <p><strong>- RELEASE DATE:</strong> {movie.releaseDate}</p>
+                      <p><strong>- OVERVIEW:</strong> {movie.overview}</p>
                     </Col>
                   ))}
                 </Row>
