@@ -31,8 +31,8 @@ function App() {
       setShowRadar(false);
       const response = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY}&q=${city}&format=json`);
       const cityResponse = response.data;
-      const weatherResponse = await axios.get(`http://localhost:3000/weather/${cityResponse[0].lat}_${cityResponse[0].lon}`);
-      const movieResponse = await axios.get(`http://localhost:3000/movies/${city}`);
+      const weatherResponse = await axios.get(`${API_KEY}/${cityResponse[0].lat}_${cityResponse[0].lon}`);
+      const movieResponse = await axios.get(`${API_KEY}/${city}`);
       setResponseData(cityResponse[0]);
       setWeatherResponseData(weatherResponse.data);
       setMovieResponseData(movieResponse.data);
