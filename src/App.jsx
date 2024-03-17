@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './App.css';
 import RadarImage from "./assets/radar2.gif";
+import WeatherComponent from './WeatherComponent';
+import MoviesComponent from './MoviesComponent';
 
 const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
@@ -89,48 +91,8 @@ function App() {
         </Row>
       )}
 
-      {weatherResponseData && (
-        <Row>
-          <Col>
-            <Card className="weather-card">
-              <Card.Body>
-                <Card.Title>Weather Forecast</Card.Title>
-                <Row className="weather-row">
-                  {weatherResponseData.map((forecast, index) => (
-                    <Col key={index}>
-                      <p><strong>DATE:</strong> {forecast.date}</p>
-                      <p><strong>DESCRIPTION:</strong> {forecast.description}</p>
-                      <p><strong>HIGH:</strong> {forecast.high}</p>
-                      <p><strong>LOW:</strong> {forecast.low}</p>
-                    </Col>
-                  ))}
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      )}
-
-      {movieResponseData && (
-        <Row>
-          <Col>
-            <Card className="movie-card">
-              <Card.Body>
-                <Card.Title>Movies</Card.Title>
-                <Row className="movie-row">
-                  {movieResponseData.map((movie, index) => (
-                    <Col key={index}>
-                      <p><strong>TITLE:</strong> {movie.title}</p>
-                      <p><strong>- RELEASE DATE:</strong> {movie.releaseDate}</p>
-                      <p><strong>- OVERVIEW:</strong> {movie.overview}</p>
-                    </Col>
-                  ))}
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      )}
+      {weatherResponseData && <WeatherComponent weatherResponseData={weatherResponseData} />}
+      {movieResponseData && <MoviesComponent movieResponseData={movieResponseData} />}
     </Container>
   );
 }
