@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './App.css';
 import RadarImage from "./assets/radar2.gif";
-import WeatherComponent from './WeatherComponent';
-import MoviesComponent from './MoviesComponent';
+import WeatherComponent from './WeatherComponent.jsx';
+import MoviesComponent from './MoviesComponent.jsx';
 
 const API_KEY = import.meta.env.VITE_CITY_EXPLORER_API_KEY;
 
